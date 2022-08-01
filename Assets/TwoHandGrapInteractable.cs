@@ -93,14 +93,14 @@ public class TwoHandGrapInteractable : XRGrabInteractable
         interactor.attachTransform.localRotation = attachInitialRotation;
     }
 
-    public override bool IsSelectableBy(IXRSelectInteractor interactor)
+   /* public override bool IsSelectableBy(IXRSelectInteractor interactor)
     {
         bool isalreadygarabbed = isSelected && !interactor.Equals(isSelected);
         return base.IsSelectableBy(interactor) && !isalreadygarabbed;
-    }
-   /* public override bool IsSelectableBy(XRBaseInteractor interactor)
+    }*/
+    public override bool IsSelectableBy(XRBaseInteractor interactor)
     {
         bool isalreadygarabbed = isSelected && !interactor.Equals(isSelected);
         return base.IsSelectableBy(interactor) && !isalreadygarabbed;      
-    }*/
+    }
 }
